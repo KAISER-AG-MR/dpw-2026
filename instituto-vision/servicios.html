@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Servicios · Instituto de la Visión</title>
+  <meta name="description" content="Consulta, estudios, cirugías, óptica, farmacia oftalmológica y laboratorio en un solo lugar.">
+  <link rel="preload" href="fonts/mogila.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- Íconos reutilizables (redes, WhatsApp, destello) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22c7ea"/><stop offset=".55" stop-color="#2449e0"/><stop offset="1" stop-color="#d13ad6"/></linearGradient>
+    <symbol id="spark" viewBox="0 0 24 24"><path fill="url(#gs)" d="M12 0c.8 6.4 5.6 11.2 12 12-6.4.8-11.2 5.6-12 12-.8-6.4-5.6-11.2-12-12C6.4 11.2 11.2 6.4 12 0z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-4.1-3.6c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3zM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM20.5 3.5A11.8 11.8 0 0 0 1.9 17.8L.2 24l6.4-1.7A11.8 11.8 0 0 0 24 12a11.7 11.7 0 0 0-3.5-8.5z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 0a8 8 0 0 0-8 8c0 6 8 16 8 16s8-10 8-16a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></symbol>
+  </defs>
+</svg>
+
+<!-- Barra de redes sociales -->
+<div class="topbar">
+  <ul>
+    <li><a href="https://www.facebook.com/institutodelavisiontorreon" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg><span class="lbl">Instituto de la Visión</span></a></li>
+    <li><a href="https://www.instagram.com/ivisionlaguna/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg><span class="lbl">ivisionlaguna</span></a></li>
+    <li><a href="https://www.youtube.com/channel/UCJSo8B7l-KWslcPu8kXS7fw" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-yt"/></svg><span class="lbl">Instituto de la Visión</span></a></li>
+    <li><a href="https://wa.me/528711414619?text=Hola%2C%20deseo%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg><span class="lbl">+52 871 141 4619</span></a></li>
+  </ul>
+</div>
+
+<!-- Menú principal -->
+<nav class="nav" id="nav" aria-label="Principal">
+  <div class="nav-in">
+    <a href="index.html" aria-label="Ir al inicio"><img src="img/logo-blanco.png" alt="Instituto de la Visión"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="especialidades.html">Especialidades</a></li>
+      <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+      <li><a href="promo.html">Promo del mes</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="tu-visita.html">Tu visita</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a class="btn btn-w" href="https://wa.me/528711414619?text=Hola%2C%20deseo%20agendar%20una%20cita" target="_blank" rel="noopener">Agenda tu cita</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</nav>
+
+<main id="contenido">
+  <div class="pagehead" aria-hidden="true"></div>
+  <section id="s-servicios" class="serv">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Servicios</span>
+        <h2>¿En qué te <em class="a">ayudamos</em> hoy?</h2>
+        <p>Elige lo que necesitas y te agendamos.</p>
+      </div>
+      <div class="paths">
+        <a class="path" href="https://wa.me/528711414619?text=Hola%2C%20quiero%20agendar%20una%20revisi%C3%B3n%20de%20la%20vista" target="_blank" rel="noopener">
+          <span class="path-img"><img class="mul" src="img/revision.webp" alt="" loading="lazy"></span>
+          <h3>Revisar mi vista</h3>
+          <p>Consulta con especialista y los estudios que necesites.</p>
+          <span class="go">Agendar revisión →</span>
+        </a>
+        <a class="path" href="https://wa.me/528711414619?text=Hola%2C%20quiero%20informes%20de%20lentes%20y%20armazones" target="_blank" rel="noopener">
+          <span class="path-img"><img src="img/armazon.webp" alt="" loading="lazy"></span>
+          <h3>Lentes y armazones</h3>
+          <p>Nuestra óptica hace tus lentes con tu graduación exacta.</p>
+          <span class="go">Pedir informes →</span>
+        </a>
+        <a class="path" href="https://wa.me/528711414619?text=Hola%2C%20quiero%20informes%20de%20lentes%20de%20contacto" target="_blank" rel="noopener">
+          <span class="path-img"><img src="img/lentes-contacto.webp" alt="" loading="lazy"></span>
+          <h3>Lentes de contacto</h3>
+          <p>Te orientamos para elegir los adecuados para tus ojos.</p>
+          <span class="go">Pedir informes →</span>
+        </a>
+      </div>
+      <div class="diff">
+        <img class="mul" src="img/diferencia.webp" alt="Unos lentes: de un lado los tulipanes se ven con color vivo y del otro apagados" loading="lazy">
+        <div class="diff-txt">
+          <span class="eyebrow">Nota la diferencia</span>
+          <h3>También en la clínica</h3>
+          <ul class="chips"><li>Cirugías</li><li>Tratamientos</li><li>Estudios especializados</li><li>Farmacia oftalmológica</li><li>Laboratorio</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Pie de página -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="img/logo-blanco.png" alt="Instituto de la Visión">
+        <p style="margin-top:14px;max-width:34ch">Clínica oftalmológica integral de alta especialidad en Torreón, Coahuila.</p>
+        <div class="social">
+          <a href="https://www.facebook.com/institutodelavisiontorreon" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+          <a href="https://www.instagram.com/ivisionlaguna/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a href="https://www.youtube.com/channel/UCJSo8B7l-KWslcPu8kXS7fw" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
+          <a href="https://wa.me/528711414619" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Explora</h4><ul><li><a href="especialidades.html">Especialidades</a></li><li><a href="servicios.html">Servicios</a></li><li><a href="promo.html">Promo del mes</a></li><li><a href="nosotros.html">Nuestra historia</a></li><li><a href="tu-visita.html">Tu primera visita</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li>(871) 729 9200</li><li>(871) 141 4619</li><li>Lun–Vie 8:00–18:00</li><li>Sáb 8:00–14:00</li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 Instituto de la Visión</span><a href="#">Aviso de privacidad</a></div>
+  </div>
+</footer>
+
+<!-- Botón flotante de Ivy (WhatsApp) -->
+<a class="fab" href="https://wa.me/528711414619?text=Hola%20Ivy%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="Agenda tu cita por WhatsApp">
+  <span class="bubble">¿Agendamos tu cita?</span>
+  <span class="bot"><img src="img/ivy.png" alt=""></span>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
